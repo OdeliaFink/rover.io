@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express'
 import { errorHandler } from './middlewares/errors'
 import routes, { Stores } from './routes'
+import cors from 'cors'
 
 interface Options {
     stores: Stores
@@ -9,6 +10,7 @@ interface Options {
 export const NewRestServer = ({ stores }: Options) => {
     const router = express.Router()
     router.use(express.json())
+    router.use(cors())
 
     router.use(createContext)
     // Register all routes
