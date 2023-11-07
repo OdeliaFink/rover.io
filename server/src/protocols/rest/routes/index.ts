@@ -15,8 +15,8 @@ export interface Stores {
 export function Register(router: Router, stores: Stores) {
     router.get(
         '/products',
-        // authenticateRequest(stores),
-        // isAuthenticated(),
+        authenticateRequest(stores),
+        isAuthenticated(),
         asyncHandler(async (req, res) => {
             try {
                 const products = await usecases.products.ListProducts(stores)()

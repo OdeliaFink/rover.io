@@ -8,14 +8,12 @@ function Login() {
         navigate('/login')
     }
     return (
-        <div className="w-[23%] ml-auto mr-auto mt-[10rem]  shadow-xl p-4 text-left">
+        <div className="w-[20%] mx-auto mt-[10rem] shadow-xl p-4 text-left">
             <div className="py-3 ml-auto mr-auto ml-3">
                 <img src={Logo} />
 
                 <div className="w-[200px]">
-                    <p className="font-sans font-light text-xl py-3">
-                        Welcome to Judo! Sign in to get a list of your saved products
-                    </p>
+                    <p className="text-xl py-3">Welcome to Judo! Sign in to get your saved list.</p>
                 </div>
                 <div>
                     <button
