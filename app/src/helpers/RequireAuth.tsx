@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 
 type Props = {
-    children: ReactNode
+    children: ReactNode | any
 }
 
 export const RequireAuth = ({ children }: Props) => {
